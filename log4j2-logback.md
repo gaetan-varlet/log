@@ -109,7 +109,8 @@ Paramètrage du fichier avec des propriétés **logLevel** et **logPath** : util
 </Configuration>
 ```
 
-Possibilité de **surcharger** des valeurs au lancement du JAR : `java -jar -DlogLevel=TRACE -DlogPath=./logs/externe.log target/toto-1.0-SNAPSHOT-jar-with-dependencies.jar`
+Possibilité de **surcharger** des valeurs au lancement du JAR :  
+`java -jar -DlogLevel=TRACE -DlogPath=./logs/externe.log target/toto-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
 
 ## Logback
