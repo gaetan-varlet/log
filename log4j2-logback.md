@@ -56,7 +56,7 @@ Comment changer la configuration ?
 
 Comment surcharger la configuration ?
 - avec un fichier externe `-Dlog4j2.configurationFile=file:...`
-- avec des properties externes pour ne pas surcharger le fichier, mais uniquement le niveau de log et où écrire le fichier de log
+- avec des properties externes pour ne pas surcharger le fichier, mais uniquement le niveau de log et le chemin où écrire le fichier de log
 
 Exemple de fichier de configuration :
 - mise en forme des lignes écrites
