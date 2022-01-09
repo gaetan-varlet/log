@@ -58,7 +58,7 @@ Comment surcharger la configuration ?
 - avec un fichier externe `-Dlog4j2.configurationFile=file:...`
 - avec des properties externes pour ne pas surcharger le fichier, mais uniquement le niveau de log et le chemin où écrire le fichier de log
 
-Exemple de fichier de configuration :
+Exemple de fichier de configuration `log4j2.xml` :
 - mise en forme des lignes écrites
 - choix du niveau de log
 - écriture dans un fichier en plus de la console
@@ -83,7 +83,7 @@ Exemple de fichier de configuration :
 </Configuration>
 ```
 
-Paramètrage du fichier log4j2.xml avec des propriétés **logLevel** et **logPath** : utilisation de valeur par défaut pour l'utilisation en local
+Paramètrage du fichier avec des propriétés **logLevel** et **logPath** : utilisation de valeur par défaut pour l'utilisation en local
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
