@@ -1,9 +1,8 @@
 # Logback avec Spring Boot
 
-Rappel sur le logging :
-- **SLF4J** est une interface de framework de journalisation, **Logback** et **Log4j2** sont des implémentations
-    - SLF4J : Simple Logging Facade for Java
-    - implémentations : java.util.logging, logback, log4j2
+Différence entre **SLF4J**, **Logback** et **Log4j2**
+- SLF4J (*Simple Logging Facade for Java*) est une **interface** de framework de journalisation
+- java.util.logging, Logback et Log4j2 sont des **implémentations** de cette interface
 
 Rappel sur Spring Boot :
 - par défaut, Spring Boot utilise le framework de log **Logback**
