@@ -1,4 +1,4 @@
-# Les logs dans un projet non Spring Boot
+# Les logs dans un projet Maven sans Spring Boot
 
 ## Log4j2
 
