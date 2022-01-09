@@ -35,7 +35,7 @@ Rappel sur Spring Boot :
 - il faut ensuite indiquer dans une property pour que le CEI puisse surcharger ce fichier
 
 ```properties
-# dans le war
+# en local
 logging.config=classpath:log4j2.xml
 # surcharge CEI
 logging.config=/etc/tomcat9/log4j2-cei.xml
