@@ -1,6 +1,8 @@
 # Les logs dans un projet Maven sans Spring Boot
 
-## Log4j2
+## Mise en place de Log4j2
+
+Ajout des bibliothèques suivantes
 
 ```xml
 <dependency>
@@ -20,7 +22,8 @@
 </dependency>
 ```
 
-Utilisation de la configuration par défaut
+Exemple en utilisant la configuration par défaut
+
 ```java
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,13 +45,15 @@ public class App {
 // 17:29:22.346 [main] ERROR fr.insee.App - ERROR
 ```
 
-Pourquoi surcharger la configuration par défaut
+Pourquoi surcharger la configuration par défaut ?
 - pour changer le niveau de log
 - pour changer la mise en forme d'écriture dans la console
 - pour écrire dans un fichier
+
 Comment changer la configuration ?
 - en utilisant un fichier `log4j2.properties` ou `log4j2.xml`
 - à déposer dans le classpath, généralement dans `src/main/resources`
+
 Comment surcharger la configuration ?
 - avec un fichier externe `-Dlog4j2.configurationFile=file:...`
 - avec des properties externes pour ne pas surcharger le fichier, mais uniquement le niveau de log et où écrire le fichier de log
