@@ -78,10 +78,7 @@ Exemple de fichier de configuration :
 </Configuration>
 ```
 
-Paramètrage du fichier log4j2.xml avec des propriétés **logLevel** et **logPath**
-- utilisation de valeur par défaut pour l'utilisation en local
-- surcharge des valeurs au lancement du JAR `java -jar -DlogLevel=TRACE -DlogPath=./logs/externe.log target/toto-1.0-SNAPSHOT-jar-with-dependencies.jar`
-
+Paramètrage du fichier log4j2.xml avec des propriétés **logLevel** et **logPath** : utilisation de valeur par défaut pour l'utilisation en local
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -107,9 +104,12 @@ Paramètrage du fichier log4j2.xml avec des propriétés **logLevel** et **logPa
 </Configuration>
 ```
 
+Surcharge des valeurs au lancement du JAR `java -jar -DlogLevel=TRACE -DlogPath=./logs/externe.log target/toto-1.0-SNAPSHOT-jar-with-dependencies.jar`
+
 
 ## Logback
 
+- ajout de la bibliothèque suivante
 ```xml
 <dependency>
     <groupId>ch.qos.logback</groupId>
@@ -118,6 +118,8 @@ Paramètrage du fichier log4j2.xml avec des propriétés **logLevel** et **logPa
 </dependency>
 ```
 
+- exemple d'utilisation de la configuration par défaut
+
 ```java
 // Hello World!
 // 17:34:17.380 [main] DEBUG fr.insee.App - DEBUG
@@ -125,3 +127,5 @@ Paramètrage du fichier log4j2.xml avec des propriétés **logLevel** et **logPa
 // 17:34:17.381 [main] WARN fr.insee.App - WARN
 // 17:34:17.381 [main] ERROR fr.insee.App - ERROR
 ```
+
+- possibilité comme par log4j2 de créer un fichier de configuration `logback.xml`
