@@ -33,7 +33,9 @@ public class App {
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        System.out.println("Hello World !");
+        System.err.println("Hello World Erreur");
+        log.trace("TRACE");
         log.debug("DEBUG");
         log.info("INFO");
         log.warn("WARN");
@@ -41,8 +43,9 @@ public class App {
     }
 }
 
-// Hello World!
-// 17:29:22.346 [main] ERROR fr.insee.App - ERROR
+// Hello World !
+// Hello World Erreur
+// 19:29:47.521 [main] ERROR fr.insee.App - ERROR
 ```
 
 Pourquoi surcharger la configuration par défaut ?
@@ -127,11 +130,12 @@ Possibilité de **surcharger** des valeurs au lancement du JAR :
 - exemple d'utilisation de la configuration par défaut
 
 ```java
-// Hello World!
-// 17:34:17.380 [main] DEBUG fr.insee.App - DEBUG
-// 17:34:17.381 [main] INFO fr.insee.App - INFO
-// 17:34:17.381 [main] WARN fr.insee.App - WARN
-// 17:34:17.381 [main] ERROR fr.insee.App - ERROR
+// Hello World !
+// Hello World Erreur
+// 19:30:28.178 [main] DEBUG fr.insee.App - DEBUG
+// 19:30:28.180 [main] INFO fr.insee.App - INFO
+// 19:30:28.180 [main] WARN fr.insee.App - WARN
+// 19:30:28.180 [main] ERROR fr.insee.App - ERROR
 ```
 
 - possibilité comme pour log4j2 de créer un fichier de configuration `logback.xml`
