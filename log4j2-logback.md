@@ -133,4 +133,4 @@ Possibilité de **surcharger** des valeurs au lancement du JAR : `java -jar -Dlo
 // 17:34:17.381 [main] ERROR fr.insee.App - ERROR
 ```
 
-- possibilité comme par log4j2 de créer un fichier de configuration `logback.xml`
+- possibilité comme pour log4j2 de créer un fichier de configuration `logback.xml`
