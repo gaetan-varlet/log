@@ -8,6 +8,19 @@ Rappel sur Spring Boot :
 - par défaut, Spring Boot utilise le framework de log **Logback**
 - pour utiliser **Log4j2** à la place, il faut modifier la configuration du projet
 
+# Utilisation de la log
+
+- importance d'utiliser les imports de Slf4j (interface) en lieu et place de des imports de Log4j2/Logback pour ne pas avoir à les changer lors du passage d'une implémentation à une autre
+
+```java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+// ajouter dans la classe TestController
+private static final Logger log = LoggerFactory.getLogger(TestController.class);
+// ajouter dans une méthode de la classe
+log.info("hello");
+```
 
 # Configuration avec Log4j2
 
@@ -106,18 +119,3 @@ spring.output.ansi.enabled=NEVER
 - pour la partie batch, il faut également faire cela, et en plus, il faut demander à enlever de la ligne de commande java la property `-Dlog4j.configuration=file:/opt/insee/sirhwsp/pd/properties/log4j.xml`
     - avant : `java11 -Xms1024m -Xmx1024m -Dlog4j.configuration=file:/opt/insee/sirhwsp/pd/properties/log4j.xml -classpath '/opt/insee/sirhwsp/pd/lib/*' -Dproperties.path=/opt/insee/sirhwsp/pd/properties fr.insee.sirhwsp.batch.Lanceur BATCH_APIRH_ALIMENTATION`
     - après : `java11 -Xms1024m -Xmx1024m -classpath '/opt/insee/sirhwsp/pd/lib/*' -Dproperties.path=/opt/insee/sirhwsp/pd/properties fr.insee.sirhwsp.batch.Lanceur BATCH_APIRH_ALIMENTATION`
-
-
-# Utilisation de la log
-
-- importance d'utiliser les imports de slf4j (interface) en lieu et place de des imports de log4j2/logback pour ne pas avoir à les changer lors du passage d'une implémentation à une autre
-
-```java
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-// ajouter dans la classe TestController
-private static final Logger log = LoggerFactory.getLogger(TestController.class);
-// ajouter dans une méthode de la classe
-log.info("hello");
-```
